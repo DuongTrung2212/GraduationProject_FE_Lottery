@@ -10,7 +10,6 @@ export default async function LocaleLayout({children, params: {locale}}:any) {
   try {
     messages = (await import(`../../../locales/${locale}/${locale}.json`)).default;
   } catch (error) {
-    // console.log(locale)
     notFound();
   }
  

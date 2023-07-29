@@ -1,8 +1,18 @@
 'use client';
- 
+
 import {useTranslations} from 'next-intl';
- 
-export default function Index() {
+// import PageLayout from 'components/PageLayout';
+
+export default function IndexPage() {
   const t = useTranslations();
-  return <h1>{t('home')}---AAA</h1>;
+
+  return (
+      <p className="max-w-[590px]">
+        {t.rich('home', {
+          code: (chunks) => (
+            <code className="font-mono text-white">{chunks}</code>
+          )
+        })}
+      </p>
+  );
 }
