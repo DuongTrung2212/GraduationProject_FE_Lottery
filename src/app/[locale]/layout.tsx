@@ -1,6 +1,8 @@
+import clsx from 'clsx';
 import {NextIntlClientProvider} from 'next-intl';
 import {notFound} from 'next/navigation';
- 
+import styles from './locale.module.scss';
+
 export function generateStaticParams() {
   return [{locale: 'en'}, {locale: 'vi'}];
 }
@@ -12,10 +14,9 @@ export default async function LocaleLayout({children, params: {locale}}:any) {
   } catch (error) {
     notFound();
   }
- 
   return (
     <html lang={locale}>
-      <body>
+      <body className={clsx(styles.locale)}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}
         </NextIntlClientProvider>
