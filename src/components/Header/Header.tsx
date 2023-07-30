@@ -7,6 +7,7 @@ import styles from './Header.module.scss';
 import Link from 'next/link';
 import { Avatar, Select } from 'antd';
 import globalVariables from '../../services/statics/index';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 export default function Header() {
   const router = useRouter();
@@ -71,7 +72,7 @@ export default function Header() {
             <p>{t('about')}</p>
           </Link> */}
         </div>
-        <div>
+        <div className={clsx('flex items-center')}>
           <Select
             onChange={(e: string) => {
               router.replace(pathname, { locale: e });
@@ -99,6 +100,7 @@ export default function Header() {
               },
             ]}
           />
+          <ConnectButton />
         </div>
       </div>
     );
