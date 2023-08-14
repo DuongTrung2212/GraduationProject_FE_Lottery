@@ -40,7 +40,7 @@ export default function Header() {
       <div
         className={clsx(
           styles.header,
-          'h-fit w-full px-5 fixed flex items-center justify-between'
+          'h-fit bg-transparent w-full z-10 px-5 top-0 flex items-center justify-between'
         )}
       >
         <div>

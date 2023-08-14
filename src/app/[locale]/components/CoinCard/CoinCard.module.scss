@@ -1,16 +1,16 @@
 .coinCard {
-  position: relative;
+  position: inherit;
   border-radius: 10px;
   // border-right: 10px solid #0007AB;
   // border-bottom: 5px solid #0007AB;
   overflow: hidden;
-  background: linear-gradient(180deg, #5b33fc 0%, #3717b5 100%);
-  filter: drop-shadow(5px 2px 0px #0007ab);
-  transform: skewX(-5deg);
+  background: linear-gradient(180deg, #5c4aa4 0%, #28127e 100%);
+  filter: drop-shadow(5px 2px 0px #000475);
+  //   transform: skewY(-5deg);
   &:hover {
-    filter: drop-shadow(5px 5px 0px rgb(185, 100, 255))
-      drop-shadow(5px 5px 0px rgb(103, 74, 255))
-      drop-shadow(5px 5px 0px rgb(12, 204, 238));
+    background: linear-gradient(180deg, #9a81ff 0%, #3e20b6 100%);
+    filter: drop-shadow(5px 5px 0px rgb(146, 103, 181))
+      drop-shadow(5px 5px 0px rgb(71, 53, 164));
     scale: 1.05;
   }
   &::before {
