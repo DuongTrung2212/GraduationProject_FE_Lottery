@@ -1,5 +1,6 @@
 
 import './globals.css';
+import 'animate.css';
 
 type Props = {
   children: React.ReactNode;

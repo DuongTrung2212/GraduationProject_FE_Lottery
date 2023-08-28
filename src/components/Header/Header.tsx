@@ -74,10 +74,10 @@ export default function Header() {
         </div>
         <div className={clsx('flex items-center')}>
           <Select
+            className={clsx('fit mr-1.5')}
             onChange={(e: string) => {
               router.replace(pathname, { locale: e });
             }}
-            style={{ width: 80 }}
             defaultValue={locale}
             options={[
               {

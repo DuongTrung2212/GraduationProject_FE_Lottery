@@ -4,5 +4,9 @@
         "rules" : "Rules",
         "forum" : "Forum",
         "about" : "About"
+    },
+    "home":{
+        "title" : "SimpRaidenEi",
+        "description":"asassa"
     }
 }

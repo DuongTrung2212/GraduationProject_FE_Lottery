@@ -3,6 +3,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import styles from './locale.module.scss';
 import { Providers } from './provider';
+import 'animate.css';
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'vi' }];
 }
