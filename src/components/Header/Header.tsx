@@ -37,7 +37,7 @@ export default function Header() {
   }, [locale]);
   {
     return (
-      <div
+      <header
         className={clsx(
           styles.header,
           'h-fit bg-transparent w-full z-10 px-5 top-0 flex items-center justify-between'
@@ -102,7 +102,7 @@ export default function Header() {
           />
           <ConnectButton />
         </div>
-      </div>
+      </header>
     );
   }
 }
