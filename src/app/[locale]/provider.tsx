@@ -13,24 +13,24 @@ import {
   ledgerWallet,
 } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum, zora } from 'wagmi/chains';
+import { mainnet, polygon, optimism, arbitrum, zora, goerli } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mainnet, polygon, optimism, arbitrum, zora],
+  [mainnet, polygon, optimism, arbitrum, zora, goerli],
   [publicProvider()]
 );
 
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID || '';
 
 const { wallets } = getDefaultWallets({
-  appName: 'RainbowKit demo',
+  appName: 'SimpRaidenEi',
   projectId,
   chains,
 });
 
 const demoAppInfo = {
-  appName: 'Rainbowkit Demo',
+  appName: 'SimpRaidenEi',
 };
 
 const connectors = connectorsForWallets([

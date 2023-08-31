@@ -25,7 +25,7 @@ export default function CoinCard(props: Props) {
           draggable={false}
           width={200}
           height={200}
-          className={clsx('w-100 h-100')}
+          className={clsx('w-100 h-100 rounded-lg')}
           src={props.src}
         />
         <span className={clsx('pt-5')}>{props.value}</span>

@@ -4,11 +4,11 @@ import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import styles from './locale.module.scss';
 import { TypeAnimation } from 'react-type-animation';
-import { CoinCard } from './components';
 import 'animate.css';
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import globalVariables from '@/services/statics';
+import { CoinCard } from '@/components';
 
 export default function IndexPage() {
   const t = useTranslations('home');
