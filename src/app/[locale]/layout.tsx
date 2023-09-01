@@ -5,8 +5,14 @@ import styles from './locale.module.scss';
 import { Providers } from './provider';
 import 'animate.css';
 import { Header } from '@/components';
+import type { Metadata } from 'next';
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'vi' }];
+}
+
+export const metadata: Metadata = {
+  title: 'Lottery Blockchain',
+  description: 'Lottery Blockchain',
 }
 
 export default async function LocaleLayout({
@@ -21,7 +27,7 @@ export default async function LocaleLayout({
     notFound();
   }
   return (
-    <html lang={locale}>
+    <html /*lang={locale}*/>
       <body className={clsx(styles.locale)}>
         <Providers>
           <NextIntlClientProvider locale={locale} messages={messages}>

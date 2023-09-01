@@ -15,10 +15,24 @@ export default function Header() {
   const pathname = usePathname();
   const locale = useLocale();
   const [dataLocales, setDataLocales] = useState({});
+  // const [visible, setVisible] = useState(true);
   function handleOnClick(e: MouseEvent<HTMLButtonElement>) {
     router.replace(pathname, { locale: locale === 'vi' ? 'en' : 'vi' });
   }
+  // const handleScroll = () => {
+  //   const currentScrollPos = window.scrollY;
 
+  //   if (currentScrollPos > 0) {
+  //     setVisible(true);
+  //   } else {
+  //     setVisible(false);
+  //   }
+  // };
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // },[]);
   useEffect(() => {
     // Sử dụng hàm async IIFE để lấy dữ liệu từ tệp dịch vụ (JSON)
     const fetchData = async () => {
@@ -40,7 +54,7 @@ export default function Header() {
       <header
         className={clsx(
           styles.header,
-          'h-fit bg-transparent w-full z-10 px-5 top-0 flex items-center justify-between'
+          `transition all duration-1000 delay-150 fixed backdrop-blur-3xl top-0 drop-shadow-2xl h-fit bg-transparent w-full z-10 px-5 top-0 flex items-center justify-between`
         )}
       >
         <div>
