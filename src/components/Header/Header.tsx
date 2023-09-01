@@ -114,7 +114,7 @@ export default function Header() {
               },
             ]}
           />
-          <ConnectButton />
+          <ConnectButton chainStatus="icon" />
         </div>
       </header>
     );

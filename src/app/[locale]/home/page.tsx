@@ -67,7 +67,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className={clsx('pt-32 h-[5000px]')}>
+    <div className={clsx('h-[5000px]')}>
       <ConfigProvider
         theme={{
           components: {

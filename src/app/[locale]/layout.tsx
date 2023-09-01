@@ -32,7 +32,9 @@ export default async function LocaleLayout({
         <Providers>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header/>
-            {children}
+            <div className={clsx('pt-32')}>
+              {children}
+            </div>
           </NextIntlClientProvider>
         </Providers>
       </body>
