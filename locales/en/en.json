@@ -1,3 +1,12 @@
 {
-    "home":"Home"
+    "header":{
+        "home" : "Home",
+        "rules" : "Rules",
+        "forum" : "Forum",
+        "about" : "About"
+    },
+    "home":{
+        "title" : "SimpRaidenEi",
+        "description":"A transparent, reputable, secure blockchain lottery system that is not controlled by anyone. With the application of blockchain technology, we can solve many current problems such as: controlled winning numbers, information held by others, high taxes, unsafe..."
+    }
 }

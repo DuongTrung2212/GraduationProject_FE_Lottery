@@ -1,0 +1,58 @@
+.coinCard {
+  position: inherit;
+  border-radius: 10px;
+  // border-right: 10px solid #0007AB;
+  // border-bottom: 5px solid #0007AB;
+  overflow: hidden;
+  background: linear-gradient(180deg, #5c4aa4 0%, #28127e 100%);
+  filter: drop-shadow(5px 2px 0px #000475);
+  //   transform: skewY(-5deg);
+  &:hover {
+    background: linear-gradient(180deg, #9a81ff 0%, #3e20b6 100%);
+    filter: drop-shadow(5px 5px 0px rgb(146, 103, 181))
+      drop-shadow(5px 5px 0px rgb(71, 53, 164));
+    scale: 1.05;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    height: 200%;
+    width: 0.6em;
+    background-color: aliceblue;
+    opacity: 0.3;
+    animation: glider 5s infinite linear;
+    animation-delay: 0.05s;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    height: 200%;
+    width: 0.4em;
+    background-color: aliceblue;
+    opacity: 0.2;
+    animation: glider 5s infinite linear;
+  }
+}
+@keyframes glider {
+  0% {
+    transform: rotate(45deg) translate(-140px, -140px);
+  }
+
+  100% {
+    transform: rotate(45deg) translate(220px, -40px);
+  }
+}
+
+// ::after{
+//     content: '';
+//     position: absolute;
+//     background-color: #0007AB;
+//     top: 0px;
+//     left: 0;
+//     width: 105%;
+//     height: 105%;
+//     border-radius: 15px;
+//     border-right: 10px solid #0007AB;
+//     border-bottom: 5px solid #0007AB;
+//     z-index: -1;
+// }

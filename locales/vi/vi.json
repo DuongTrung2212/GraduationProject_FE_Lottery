@@ -1,3 +1,12 @@
 {
-    "home":"Trang chủ"
+    "header":{
+        "home" : "Trang chủ",
+        "rules" : "Thể lệ",
+        "forum" : "Diễn đàn",
+        "about" : "Về tôi"
+    },
+    "home":{
+        "title" : "SimpRaidenEi",
+        "description":"Một hệ thống sổ xố blockchain minh bạch, uy tín, bảo mật không bị một bất kì ai kiểm soát. Với việc áp dụng công nghệ blockchain, chúng ta có thể giải quyết được nhiều vấn đề hiện nay như: con số trúng giải bị kiểm soát, thông tin bị người khác nắm giữ, bị đánh thuế cao, không an toàn..."
+    }
 }
