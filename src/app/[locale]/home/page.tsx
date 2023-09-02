@@ -11,6 +11,7 @@ import {
   TabsProps,
 } from 'antd';
 import './home.module.scss';
+import SystemLotteryPage from '@/components/SystemLotteryPage';
 
 export default function Home() {
   const [stateTab, setStateTab] = useState('1');
@@ -18,7 +19,7 @@ export default function Home() {
     {
       key: '1',
       label: '',
-      children: 'Content of Tab Pane 1',
+      children: <SystemLotteryPage/>,
     },
     {
       key: '2',

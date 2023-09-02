@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation';
 import styles from './locale.module.scss';
 import { Providers } from './provider';
 import 'animate.css';
-import { Header } from '@/components';
 import type { Metadata } from 'next';
+import Header from '@/components/Header';
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'vi' }];
 }
@@ -32,7 +32,7 @@ export default async function LocaleLayout({
         <Providers>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header/>
-            <div className={clsx('pt-32')}>
+            <div className={clsx('pt-32 px-4')}>
               {children}
             </div>
           </NextIntlClientProvider>
