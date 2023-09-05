@@ -124,9 +124,15 @@ export default function SystemLotteryItem() {
             onClose={onClose}
             open={openDrawer}
             getContainer={false}
-            headerStyle={{ background:'linear-gradient(180deg, rgba(54, 83, 184, 0.93) 0%, rgba(66, 83, 144, 0.75) 100%)' }}
+            headerStyle={{
+              background:
+                'linear-gradient(0deg, rgba(54, 83, 184, 0.93) 0%, rgba(66, 83, 144, 0.75) 100%)',
+            }}
             bodyStyle={{
-              background:'linear-gradient(180deg, rgba(54, 83, 184, 0.93) 0%, rgba(66, 83, 144, 0.75) 100%)'
+              background:
+                'linear-gradient(180deg, rgba(54, 83, 184, 0.93) 0%, rgba(66, 83, 144, 0.75) 100%)',
+              scrollMarginBottom: '100px',
+              scrollSnapAlign: 'center',
             }}
             style={{
               borderTopLeftRadius: '10px',
@@ -140,13 +146,16 @@ export default function SystemLotteryItem() {
             }
           >
             <div>
-              <HistoryItem/>
-              <HistoryItem/>
-              <HistoryItem/>
-              <HistoryItem/>
-              <HistoryItem/>
+              <HistoryItem />
+              <HistoryItem />
+              <HistoryItem />
+              <HistoryItem />
+              <HistoryItem />
+              <HistoryItem />
+              <HistoryItem />
+              <HistoryItem />
               <VerificationInput
-                placeholder='?'
+                placeholder="?"
                 validChars={'0-9'}
                 classNames={{
                   container: clsx(''),
@@ -159,7 +168,6 @@ export default function SystemLotteryItem() {
           </Drawer>
         </div>
         <div
-          data-aos="fade-up"
           className={clsx(
             'w-full subpixel-antialiased relative h-[200px] flex'
           )}
@@ -169,34 +177,40 @@ export default function SystemLotteryItem() {
               'w-1/4 flex justify-center items-center flex-col bg-teal-200'
             )}
           >
-            <Statistic
-              title="Prize"
-              prefix={
-                <FontAwesomeIcon
-                  icon={faBitcoinSign}
-                  style={{ color: '#dbd400' }}
-                />
-              }
-              suffix="BNB"
-              value={'1000'}
-              valueStyle={{ fontWeight: 'bold' }}
-            />
+            <div data-aos="fade-up">
+              <Statistic
+                title="Prize"
+                prefix={
+                  <FontAwesomeIcon
+                    icon={faBitcoinSign}
+                    style={{ color: '#dbd400' }}
+                  />
+                }
+                suffix="BNB"
+                value={'1000'}
+                valueStyle={{ fontWeight: 'bold' }}
+              />
+            </div>
           </div>
           <div className={clsx('w-9/12 p-5 bg-teal-500')}>
             <Row gutter={16}>
               <Col span={12}>
-                <Statistic
-                  valueStyle={{ fontWeight: 'bold' }}
-                  title="Active Users"
-                  value={112893}
-                />
+                <div data-aos="fade-up">
+                  <Statistic
+                    valueStyle={{ fontWeight: 'bold' }}
+                    title="Active Users"
+                    value={112893}
+                  />
+                </div>
               </Col>
               <Col span={8}>
-                <Statistic.Countdown
-                  valueStyle={{ fontWeight: 'bold' }}
-                  title="End"
-                  value={deadline}
-                />
+                <div data-aos="fade-up">
+                  <Statistic.Countdown
+                    valueStyle={{ fontWeight: 'bold' }}
+                    title="End"
+                    value={deadline}
+                  />
+                </div>
               </Col>
               <Col>
                 <Button onClick={() => setOpenInfoModal(!openInfoModal)}>
@@ -222,12 +236,14 @@ export default function SystemLotteryItem() {
             <Steps current={currentStep} items={items} />
             <div style={contentStyle}>{steps[currentStep].content}</div>
           </Modal>
-          <Button
-            onClick={() => setOpenBuyModal(!openBuyModal)}
-            className={clsx('absolute bottom-0 left-1/2')}
-          >
-            AAAA
-          </Button>
+          <div data-aos="fade-in">
+            <Button
+              onClick={() => setOpenBuyModal(!openBuyModal)}
+              className={clsx('absolute bottom-0 left-1/2')}
+            >
+              AAAA
+            </Button>
+          </div>
         </div>
       </ConfigProvider>
     </div>
