@@ -4,6 +4,7 @@ import {
   Col,
   ConfigProvider,
   Drawer,
+  Input,
   Modal,
   Popover,
   Row,
@@ -82,7 +83,7 @@ export default function SystemLotteryItem() {
       <ConfigProvider
         theme={{
           token: {
-            colorTextDescription: 'red',
+            colorTextDescription: '#f0f0f0',
           },
           components: {
             Statistic: {
@@ -123,6 +124,7 @@ export default function SystemLotteryItem() {
             closable={false}
             onClose={onClose}
             open={openDrawer}
+            width={500}
             getContainer={false}
             headerStyle={{
               background:
@@ -145,16 +147,19 @@ export default function SystemLotteryItem() {
               </Space>
             }
           >
-            <div>
-              <HistoryItem />
-              <HistoryItem />
-              <HistoryItem />
-              <HistoryItem />
-              <HistoryItem />
-              <HistoryItem />
-              <HistoryItem />
-              <HistoryItem />
-              <VerificationInput
+            <div className={clsx('w-full rounded overflow-hidden relative h-full')}>
+              <Input.Search placeholder='Search...'/>
+              <div className={clsx('w-full mt-2 overflow-auto h-[400px]')}>
+                <HistoryItem />
+                <HistoryItem />
+                <HistoryItem />
+                <HistoryItem />
+                <HistoryItem />
+                <HistoryItem />
+                <HistoryItem />
+                <HistoryItem />
+              </div>
+              {/* <VerificationInput
                 placeholder="?"
                 validChars={'0-9'}
                 classNames={{
@@ -163,7 +168,7 @@ export default function SystemLotteryItem() {
                   characterInactive: clsx(''),
                   characterSelected: clsx(''),
                 }}
-              />
+              /> */}
             </div>
           </Drawer>
         </div>
@@ -173,8 +178,9 @@ export default function SystemLotteryItem() {
           )}
         >
           <div
+          style={{background:'linear-gradient(90deg, rgba(54, 83, 184, 0.93) 0%, rgba(66, 83, 144, 0.75) 100%)'}}
             className={clsx(
-              'w-1/4 flex justify-center items-center flex-col bg-teal-200'
+              'w-1/4 flex justify-center items-center flex-col'
             )}
           >
             <div data-aos="fade-up">
@@ -192,7 +198,7 @@ export default function SystemLotteryItem() {
               />
             </div>
           </div>
-          <div className={clsx('w-9/12 p-5 bg-teal-500')}>
+          <div style={{background:'linear-gradient(180deg, rgba(54, 83, 184, 0.93) 0%, rgba(66, 83, 144, 0.75) 100%)'}} className={clsx('w-9/12 p-5')}>
             <Row gutter={16}>
               <Col span={12}>
                 <div data-aos="fade-up">
