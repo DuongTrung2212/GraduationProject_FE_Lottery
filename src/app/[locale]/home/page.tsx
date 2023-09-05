@@ -1,7 +1,6 @@
 'use client';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { Tab, TabList } from '@web3uikit/core';
 import {
   Button,
   ConfigProvider,
@@ -11,6 +10,7 @@ import {
   TabsProps,
 } from 'antd';
 import './home.module.scss';
+import SystemLotteryPage from '@/components/SystemLotteryPage';
 
 export default function Home() {
   const [stateTab, setStateTab] = useState('1');
@@ -18,7 +18,7 @@ export default function Home() {
     {
       key: '1',
       label: '',
-      children: 'Content of Tab Pane 1',
+      children: <SystemLotteryPage/>,
     },
     {
       key: '2',
@@ -67,7 +67,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className={clsx('pt-32 h-[5000px]')}>
+    <div className={clsx('h-[5000px]')}>
       <ConfigProvider
         theme={{
           components: {

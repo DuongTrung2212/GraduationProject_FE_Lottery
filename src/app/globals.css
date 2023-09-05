@@ -17,6 +17,28 @@ img{
   object-fit: cover;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(157, 157, 157); 
+  border-radius: 3px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(139, 139, 139); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #8c2bd1; 
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     /* --foreground-rgb: 255, 255, 255;

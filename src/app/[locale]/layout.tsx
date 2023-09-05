@@ -4,11 +4,13 @@ import { notFound } from 'next/navigation';
 import styles from './locale.module.scss';
 import { Providers } from './provider';
 import 'animate.css';
-import { Header } from '@/components';
 import type { Metadata } from 'next';
-export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'vi' }];
-}
+import Header from '@/components/Header';
+import moment from 'moment';
+import 'moment/locale/vi';
+// export function generateStaticParams() {
+//   return [{ locale: 'en' }, { locale: 'vi' }];
+// }
 
 export const metadata: Metadata = {
   title: 'Lottery Blockchain',
@@ -26,13 +28,16 @@ export default async function LocaleLayout({
   } catch (error) {
     notFound();
   }
+  moment.locale('vi');
   return (
-    <html /*lang={locale}*/>
+    <html lang={locale}>
       <body className={clsx(styles.locale)}>
         <Providers>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Header/>
-            {children}
+            <div className={clsx('pt-32 px-4')}>
+              {children}
+            </div>
           </NextIntlClientProvider>
         </Providers>
       </body>
