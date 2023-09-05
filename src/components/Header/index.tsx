@@ -52,9 +52,10 @@ export default function Header() {
   {
     return (
       <header
+        data-aos="fade-down"
         className={clsx(
           styles.header,
-          `transition all duration-1000 delay-150 fixed backdrop-blur-3xl top-0 drop-shadow-2xl h-fit bg-transparent w-full z-10 px-5 top-0 flex items-center justify-between`
+          `transition z-[1049] all duration-1000 delay-150 fixed backdrop-blur-3xl top-0 drop-shadow-2xl h-fit bg-transparent w-full z-10 px-5 top-0 flex items-center justify-between`
         )}
       >
         <div>

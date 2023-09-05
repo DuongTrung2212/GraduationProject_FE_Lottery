@@ -4,11 +4,13 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import Image from 'next/image';
 import globalVariables from '@/services/statics';
 import SystemLotteryItem from './SystemLotteryItem';
+import clsx from 'clsx';
 const { Meta } = Card;
 export default function SystemLotteryPage() {
   return (
-    <div>
+    <div className={clsx('flex items-center flex-col')}>
       <SystemLotteryItem/>
+      {/* <SystemLotteryItem/> */}
     </div>
   );
 }

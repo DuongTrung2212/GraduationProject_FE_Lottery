@@ -1,7 +1,6 @@
 'use client';
 import clsx from 'clsx';
 import React, { useState } from 'react';
-import { Tab, TabList } from '@web3uikit/core';
 import {
   Button,
   ConfigProvider,
